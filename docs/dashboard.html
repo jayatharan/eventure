@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eventure Dashboard</title>
+<style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+    .navbar { background-color: #333; color: white; padding: 10px; text-align: center; }
+    .navbar a { color: white; margin: 0 10px; text-decoration: none; }
+    .container { width: 80%; margin: auto; overflow: hidden; }
+    .dashboard-header { padding: 20px 0; display: flex; justify-content: space-between; align-items: center; }
+    .dashboard-header h1 { margin: 0; }
+    .dashboard-section { background: white; padding: 20px; margin-top: 20px; }
+    .task-item { background: #e7e7e7; padding: 10px; margin-bottom: 10px; }
+    .button { padding: 10px 20px; background-color: #008CBA; color: white; border: none; border-radius: 4px; cursor: pointer; }
+</style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Events</a>
+        <a href="#">Tasks</a>
+        <a href="#">Profile</a>
+        <a href="#">Logout</a>
+    </div>
+    <div class="container">
+        <div class="dashboard-header">
+            <h1>Welcome, [User Name]</h1>
+            <button class="button">Create New Event</button>
+        </div>
+        <div class="dashboard-section">
+            <h2>Upcoming Events</h2>
+            <!-- Sample Event Data -->
+            <p>Event 1: Conference on Web Development - Date: 2024-02-15</p>
+            <p>Event 2: Tech Networking Meetup - Date: 2024-03-05</p>
+        </div>
+        <div class="dashboard-section">
+            <h2>Your Tasks</h2>
+            <!-- Sample Task Data -->
+            <div class="task-item">Task 1: Prepare presentation for the conference</div>
+            <div class="task-item">Task 2: Coordinate with tech meetup speakers</div>
+        </div>
+    </div>
+</body>
+</html>

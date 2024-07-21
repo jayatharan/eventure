@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eventure - Create Task</title>
+<style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+    .navbar { background-color: #333; color: white; padding: 10px; text-align: center; }
+    .navbar a { color: white; margin: 0 10px; text-decoration: none; }
+    .container { width: 80%; margin: auto; overflow: hidden; }
+    .form-header { padding: 20px 0; text-align: center; }
+    .form-section { background: white; padding: 20px; margin-top: 20px; }
+    .form-field { margin-bottom: 15px; }
+    .form-field label { display: block; margin-bottom: 5px; }
+    .form-field input[type="text"], .form-field input[type="date"], .form-field textarea, .form-field select { width: 100%; padding: 10px; margin: 5px 0; border-radius: 4px; border: 1px solid #ddd; }
+    .button { padding: 10px 20px; background-color: #008CBA; color: white; border: none; border-radius: 4px; cursor: pointer; }
+</style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Events</a>
+        <a href="#">Tasks</a>
+        <a href="#">Profile</a>
+        <a href="#">Logout</a>
+    </div>
+    <div class="container">
+        <div class="form-header">
+            <h1>Create New Task</h1>
+        </div>
+        <div class="form-section">
+            <form>
+                <div class="form-field">
+                    <label for="relatedEvent">Related Event</label>
+                    <select id="relatedEvent" name="relatedEvent">
+                        <option value="event1">Event 1: Tech Conference</option>
+                        <option value="event2">Event 2: Annual Meetup</option>
+                        <!-- Additional event options can be added here -->
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label for="taskTitle">Task Title</label>
+                    <input type="text" id="taskTitle" name="taskTitle">
+                </div>
+                <div class="form-field">
+                    <label for="taskDescription">Task Description</label>
+                    <textarea id="taskDescription" name="taskDescription"></textarea>
+                </div>
+                <div class="form-field">
+                    <label for="taskDeadline">Deadline</label>
+                    <input type="date" id="taskDeadline" name="taskDeadline">
+                </div>
+                <div class="form-field">
+                    <label for="taskAssignee">Assignee</label>
+                    <select id="taskAssignee" name="taskAssignee">
+                        <option value="user1">User 1</option>
+                        <option value="user2">User 2</option>
+                        <option value="user3">User 3</option>
+                        <!-- Additional user options can be added here -->
+                    </select>
+                </div>
+                <div class="form-field">
+                    <button type="submit" class="button">Create Task</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+### send a post to create a event
+POST http://localhost:8080/api/events
+Content-Type: application/json
+
+{
+  "title": "test From Client",
+  "description": "test description",
+  "location": "test location",
+  "startDate": "2024-06-27T11:42:30.049+00:00",
+  "adminIds": ["66856469a04f387c6fab0a05", "6686dae591a3811cd27628ee"],
+  "tasks": [
+    {
+      "title": "test task1",
+      "description": "test description",
+      "deadLine": "2024-06-26T11:42:30.049+00:00",
+      "userId": "66856469a04f387c6fab0a05"
+    }
+  ],
+  "participants": [
+    {
+      "userId": "6686daf891a3811cd27628ef"
+    }
+  ]
+}
+
+### send a get to retrieve a events
+GET http://localhost:8080/api/events
+
+### send a put to update event
+PUT http://localhost:8080/api/events/667c19020fc31f4ea2f50897
+Content-Type: application/json
+
+{
+  "title": "test update From Client",
+  "startDate": "2024-06-26T11:42:30.049+00:00"
+}
+
+### send a get to retrive my events
+GET http://localhost:8080/api/events/my-events
+
+### send a get to retrive event
+GET http://localhost:8080/api/events/6686df583dd3ce062bd728e5
+
+
+### send a get to retrive updated event
+GET http://localhost:8080/api/events/667c19020fc31f4ea2f50897
+
+### send a delete to delete event
+DELETE http://localhost:8080/api/events/667c19020fc31f4ea2f50897

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eventure - Create Event</title>
+<style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+    .navbar { background-color: #333; color: white; padding: 10px; text-align: center; }
+    .navbar a { color: white; margin: 0 10px; text-decoration: none; }
+    .container { width: 80%; margin: auto; overflow: hidden; }
+    .form-header { padding: 20px 0; text-align: center; }
+    .form-section { background: white; padding: 20px; margin-top: 20px; }
+    .form-field { margin-bottom: 15px; }
+    .form-field label { display: block; margin-bottom: 5px; }
+    .form-field input[type="text"], .form-field input[type="date"], .form-field textarea, .form-field select { width: 100%; padding: 10px; margin: 5px 0; border-radius: 4px; border: 1px solid #ddd; }
+    .button { padding: 10px 20px; background-color: #008CBA; color: white; border: none; border-radius: 4px; cursor: pointer; }
+</style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Events</a>
+        <a href="#">Tasks</a>
+        <a href="#">Profile</a>
+        <a href="#">Logout</a>
+    </div>
+    <div class="container">
+        <div class="form-header">
+            <h1>Create New Event</h1>
+        </div>
+        <div class="form-section">
+            <form>
+                <div class="form-field">
+                    <label for="eventName">Event Name</label>
+                    <input type="text" id="eventName" name="eventName">
+                </div>
+                <div class="form-field">
+                    <label for="eventDate">Event Date</label>
+                    <input type="date" id="eventDate" name="eventDate">
+                </div>
+                <div class="form-field">
+                    <label for="eventLocation">Location</label>
+                    <input type="text" id="eventLocation" name="eventLocation">
+                </div>
+                <div class="form-field">
+                    <label for="eventDescription">Event Description</label>
+                    <textarea id="eventDescription" name="eventDescription"></textarea>
+                </div>
+                <div class="form-field">
+                    <label for="eventResponsible">Event Responsible</label>
+                    <select id="eventResponsible" name="eventResponsible">
+                        <option value="user1">User 1</option>
+                        <option value="user2">User 2</option>
+                        <option value="user3">User 3</option>
+                        <!-- Additional options can be added here -->
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label for="eventParticipants">Participants</label>
+                    <select id="eventParticipants" name="eventParticipants" multiple>
+                        <option value="participant1">Participant 1</option>
+                        <option value="participant2">Participant 2</option>
+                        <option value="participant3">Participant 3</option>
+                        <!-- Additional options can be added here -->
+                    </select>
+                </div>
+                <div class="form-field">
+                    <button type="submit" class="button">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
