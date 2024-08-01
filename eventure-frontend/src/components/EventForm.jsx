@@ -22,7 +22,7 @@ const formDefaultValue = {
     description: "",
     location: "",
     startDate: new Date().toISOString(),
-    adminIds: ["66856469a04f387c6fab0a05"]
+    adminIds: []
 }
 
 export const taskDefaultValue = {

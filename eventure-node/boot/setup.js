@@ -7,11 +7,13 @@ import logger from '../middleware/winston.js';
 import taskRouter from "../routes/task.routes.js"
 import participantRouter from "../routes/participant.routes.js"
 import userRouter from "../routes/user.routes.js"
+import authRouter from "../routes/auth.routes.js"
 
 import "../models/userModel.js"
 import "../models/eventModel.js"
 import "../models/taskModel.js"
 import "../models/participantModel.js"
+import authenticateToken from "../middleware/authenticateToken.js"
 
 const PORT = 8000;
 const app = express()
@@ -33,9 +35,10 @@ const registerCoreMiddleWare = () => {
         app.use(helmet());
         app.use(express.json());     
 
-        app.use("/tasks", taskRouter)
-        app.use("/participants", participantRouter)
-        app.use("/users", userRouter)
+        app.use("/auth", authRouter)
+        app.use("/tasks", authenticateToken, taskRouter)
+        app.use("/participants", authenticateToken, participantRouter)
+        app.use("/users", authenticateToken, userRouter)
     }catch(error){
         logger.error(error.message);
     }

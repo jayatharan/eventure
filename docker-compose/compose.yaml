@@ -1,0 +1,19 @@
+services:
+  eventure-frontend:
+    build: ../eventure-frontend/.
+    ports:
+      - "4000:80"
+  eventure-node:
+    build: ../eventure-node/.
+    ports:
+      - "8000:8000"
+
+
+
+
+
+
+
+
+
+

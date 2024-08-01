@@ -1,10 +1,0 @@
-
-g	java:S112("FDefine and throw a dedicated exception instead of using a generic one.(©š´µûÿÿÿÿ8ä¤§Ëˆ2
-…
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8·Ö¦Ëˆ2J$fde02fc1-35e8-4b5c-a3c8-b7d198e0d72d
-…
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8·Ö¦Ëˆ2J$4866b06a-d4fd-430b-add4-b24f3a178881
-œ
-java:S1128"TRemove this unused import 'org.springframework.web.client.HttpClientErrorException'.(ğ»òøÿÿÿÿ8»Ö¦Ëˆ2J$198d2200-cd7b-4d92-96d3-0b89c9fa6262
-s
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8»Ö¦Ëˆ2J$700a7ad6-2d92-4efc-bbb1-748ceb5a1dcc

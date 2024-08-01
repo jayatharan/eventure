@@ -7,9 +7,16 @@ const userSchema = new Schema({
   name: {
     type: String,
     required: true,
+    unique: true
   },
-}, {
-  timestamps: true, // Adds createdAt and updatedAt fields
+  password: {
+    type: String,
+    required: true,
+  },
+  _t: {
+    type: String,
+    default: "User"
+  }
 });
 
 // Create the User model

@@ -1,7 +1,7 @@
 import Task from "../models/taskModel.js"
 
 export const getMyTasks = async (req, res) => {
-    const userId = '66856469a04f387c6fab0a05'
+    const userId = req.user.sub
     const {
         status,
         from

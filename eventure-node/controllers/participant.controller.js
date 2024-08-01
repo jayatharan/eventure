@@ -2,7 +2,7 @@ import Event from "../models/eventModel.js";
 import Participant from "../models/participantModel.js";
 
 export const getMyParticipants = async (req, res) => {
-    const userId = '66856469a04f387c6fab0a05'
+    const userId = req.user.sub;
     const {
         status,
         from

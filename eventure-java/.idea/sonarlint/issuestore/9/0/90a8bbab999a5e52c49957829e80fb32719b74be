@@ -1,0 +1,21 @@
+
+u
+java:S1874"2Remove this use of "setSubject"; it is deprecated.(ƒú¯Ò8«îÖ÷2J$0cbd0f17-3fb2-4bbe-940e-dc77dbbacf96
+{
+java:S1874"3Remove this use of "setIssuedAt"; it is deprecated.(Ô£µïûÿÿÿÿ8«îÖ÷2J$d91671ad-4431-447b-834a-72b2ac0f177b
+}
+java:S1874"5Remove this use of "setExpiration"; it is deprecated.(ïŠÚÌùÿÿÿÿ8¬îÖ÷2J$13556b41-c174-43f4-b8f8-e7f07c364781
+s
+java:S1874"0Remove this use of "signWith"; it is deprecated.(¹äõ8¬îÖ÷2J$1aea4a25-4406-4770-8b8f-f3a20a83211f
+}
+java:S1874":Remove this use of "SignatureAlgorithm"; it is deprecated.(¹äõ8¬îÖ÷2J$fe93ae4d-67e7-4e2c-93c7-d4267a782a19
+}
+java:S1874":Remove this use of "SignatureAlgorithm"; it is deprecated.(¹äõ8¬îÖ÷2J$b2196fed-80aa-4e1c-9faa-845e663d9f9c
+w
+java:S1874,"5Remove this use of "setSigningKey"; it is deprecated.(‘­8®îÖ÷2J$738166b2-7ab3-421e-ac20-86e8f9bf622d
+~
+java:S1874."6Remove this use of "parseClaimsJws"; it is deprecated.(ëÙ–ºıÿÿÿÿ8®îÖ÷2J$cf71de8a-e09a-4e74-9b24-5acfe9f1c6e3
+r
+java:S1874/"/Remove this use of "getBody"; it is deprecated.(ÊÄ¿Ì8®îÖ÷2J$bca09fcb-16ca-4e58-a345-edae336341e8
+Œ
+java:S1128"DRemove this unused import 'org.springframework.http.ResponseEntity'.(¶¯ø¦úÿÿÿÿ8‡¯Ù÷2J$4ac577ef-e421-4d8e-9fa4-481092bc1d32
