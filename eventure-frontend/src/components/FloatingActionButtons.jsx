@@ -3,9 +3,12 @@ import AddIcon from '@mui/icons-material/Add';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { useSetRecoilState } from "recoil";
 import eventFormState from "../app/recoil/eventFormAtom";
+import { useContext } from "react";
+import AppContext from "../app/contexts/AppContexts";
 
 function FloatingActionButtons() {
     const setEventForm = useSetRecoilState(eventFormState);
+    const appContext = useContext(AppContext);
 
     return (
         <Stack
@@ -24,7 +27,7 @@ function FloatingActionButtons() {
                     <AddIcon />
                 </Tooltip>
             </Fab>
-            <Fab aria-label="logout">
+            <Fab aria-label="logout" onClick={() => appContext.logout()}>
                 <Tooltip title="Logout">
                     <LogoutIcon />
                 </Tooltip>
