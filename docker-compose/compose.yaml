@@ -1,25 +1,29 @@
 services:
+  mongo:
+    image: mongo:latest
+    container_name: eventure-mongo
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_DATABASE=eventure
+
   eventure-frontend:
     build: ../eventure-frontend/.
     ports:
-      - "4000:80"
+      - "80:80"
+  
   eventure-node:
     build: ../eventure-node/.
     ports:
       - "8000:8000"
+    depends_on:
+      - mongo
+
   eventure-java:
     build: ../eventure-java/.
     ports:
       - "8080:8080"
     environment:
       - JAVA_OPTS=-Xmx512m
-
-
-
-
-
-
-
-
-
-
+    depends_on:
+      - mongo

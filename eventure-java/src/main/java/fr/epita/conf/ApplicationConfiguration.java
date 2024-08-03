@@ -15,7 +15,7 @@ public class ApplicationConfiguration {
 
     @Bean
     public Datastore datastore() {
-        String uri = "mongodb://localhost:27017/";
+        String uri = "mongodb://mongo:27017/";
         Datastore datastore = Morphia.createDatastore(MongoClients.create(uri), DATABASE_NAME);
         datastore.getMapper().mapPackage("com.mongodb.morphia.entities");
         datastore.ensureIndexes();

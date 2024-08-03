@@ -16,7 +16,6 @@ const AppProvider = ({
     })
 
     const refreshAccessToken = async () => {
-        console.log("refreshing")
         setLoading(true)
         const refreshToken = localStorage.getItem("refreshToken");
 
@@ -52,6 +51,7 @@ const AppProvider = ({
             authenticated: false,
             user: null,
         })
+        localStorage.removeItem("refreshToken")
     }
 
     useEffect(()=> {
