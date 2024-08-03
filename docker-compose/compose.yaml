@@ -7,6 +7,12 @@ services:
     build: ../eventure-node/.
     ports:
       - "8000:8000"
+  eventure-java:
+    build: ../eventure-java/.
+    ports:
+      - "8080:8080"
+    environment:
+      - JAVA_OPTS=-Xmx512m
 
 
 

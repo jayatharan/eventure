@@ -1,5 +1,5 @@
 import User from "../models/userModel.js";
-import { generateTokens } from "../utils/jwt.utils.js";
+import { generateTokens, refreshAccessToken } from "../utils/jwt.utils.js";
 import { comparePassword, hashPassword } from "../utils/password.utils.js";
 
 export const signUp = async (req, res) => {
@@ -58,5 +58,27 @@ export const nameCheck = async (req, res) => {
 
     return res.send({
         exist : exist ? true : false
+    })
+}
+
+export const refreshToken = async (req, res) => {
+    const {
+        token
+    } = req.body;
+
+    const data = refreshAccessToken(token);
+
+    if(!data) {
+        return res.status(401).send(null);
+    }
+
+    const user = await User.findById(data.userId)
+
+    return res.send({
+        user,
+        tokens: {
+            accessToken: data.accessToken,
+            refreshToken: token,
+        }
     })
 }

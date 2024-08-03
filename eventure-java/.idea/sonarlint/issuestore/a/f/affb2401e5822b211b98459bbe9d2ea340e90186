@@ -1,8 +1,8 @@
 
 |
-java:S1874"4Remove this use of "secretKeyFor"; it is deprecated.(ØÃå¶ÿÿÿÿÿ8ĞÇÆ÷2J$bcac6a5e-9e6d-48ea-81ef-d55204815958
+java:S1874"4Remove this use of "secretKeyFor"; it is deprecated.(ØÃå¶ÿÿÿÿÿ8ĞÇÆ÷2J$5d471e41-7643-4e7e-a05d-3c626bb64621
 ‚
-java:S1874":Remove this use of "SignatureAlgorithm"; it is deprecated.(ØÃå¶ÿÿÿÿÿ8âêÆ÷2J$d25ec84f-352f-4a91-9dda-f0f09a604b06
+java:S1874":Remove this use of "SignatureAlgorithm"; it is deprecated.(ØÃå¶ÿÿÿÿÿ8âêÆ÷2J$5bd42716-87ee-4e22-9cfb-44e1e59d6f43
 ‚
-java:S1874":Remove this use of "SignatureAlgorithm"; it is deprecated.(ØÃå¶ÿÿÿÿÿ8âêÆ÷2J$4a242a9c-578b-4231-b83b-604f56ddead6
-r	java:S106"+Replace this use of System.out by a logger.(€ÊÌÄûÿÿÿÿ8÷œÆ÷2J$d3a1101d-1a6b-435f-9827-53fd7144c3d1
+java:S1874":Remove this use of "SignatureAlgorithm"; it is deprecated.(ØÃå¶ÿÿÿÿÿ8âêÆ÷2J$adea1582-aef1-4237-ba66-c3a39cc64044
+r	java:S106"+Replace this use of System.out by a logger.(€ÊÌÄûÿÿÿÿ8÷œÆ÷2J$344e48b7-4cab-4e39-94ca-c9f3f2f47320

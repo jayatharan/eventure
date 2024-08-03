@@ -1,17 +1,17 @@
 
-M
-java:S3740«"/Provide the parametrized type for this generic.(©“ãÊ8Ä‚ê÷2
-M
-java:S3740·"/Provide the parametrized type for this generic.(Ë¡ˆ¾8Ä‚ê÷2
+s
+java:S3740«"/Provide the parametrized type for this generic.(©“ãÊ8Ä‚ê÷2J$e544f035-fa89-46dd-87a8-61f779a06e5a
+s
+java:S3740·"/Provide the parametrized type for this generic.(Ë¡ˆ¾8Ä‚ê÷2J$ce4e4198-1799-42a0-8cc7-a6f4cce290fd
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8‡Üå÷2J$f1d15e7c-8ee4-4973-924c-9d5ca37e7100
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8‡Üå÷2J$52a026b1-bf5a-42b1-a074-3a5999d42c6d
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8‡Üå÷2J$ba644647-8810-4a97-9c12-1abb65c18e31
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8‡Üå÷2J$721c2a0e-3bab-46c5-af9d-c4d96949a131
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8‡Üå÷2J$4e54fac2-e90b-4f4f-b84b-c350c3c14781
->
-java:S38641"!Remove this use of "Stream.peek".(ã›¾€8Ë‚ê÷2
->
-java:S3864^"!Remove this use of "Stream.peek".(Æ§™½8Ğ‚ê÷2
->
-java:S3864f"!Remove this use of "Stream.peek".(ğÂ€ş8Ñ‚ê÷2
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8‡Üå÷2J$b4f9e658-56a0-4b6b-855b-63ddbe52c752
+d
+java:S38641"!Remove this use of "Stream.peek".(ã›¾€8Ë‚ê÷2J$2c9ae701-d707-4d63-a439-681af60d5f34
+d
+java:S3864^"!Remove this use of "Stream.peek".(Æ§™½8Ğ‚ê÷2J$33d58d4e-d392-4fac-8b27-1efab81f70d7
+d
+java:S3864f"!Remove this use of "Stream.peek".(ğÂ€ş8Ñ‚ê÷2J$ebd827e2-f28e-4b51-bcac-73a9b32d6f56

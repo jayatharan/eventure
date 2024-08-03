@@ -1,8 +1,6 @@
 
 7
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
-m
-=src/main/java/fr/epita/app/conf/ApplicationConfiguration.java,7/0/700423f9d8d56e4ca7df8150a4085818d78b5d1e
 _
 /src/main/java/fr/epita/services/JWTService.java,9/0/90a8bbab999a5e52c49957829e80fb32719b74be
 i

@@ -8,12 +8,15 @@ export const generateTokens = (user) => {
     name: user.name,
   };
 
-  const accessToken = jwt.sign(payload, secretKey, {
-    expiresIn: '1h'
-  });
+  const accessToken = generateAccessToken(payload);
+
+  const refreshToken = jwt.sign(payload, secretKey, {
+    expiresIn: '7d'
+  })
 
   return {
-    accessToken
+    accessToken,
+    refreshToken
   };
 };
 
@@ -25,3 +28,28 @@ export const verifyToken = (token) => {
     return null;
   }
 };
+
+const generateAccessToken = (payload) => {
+  const accessToken = jwt.sign(payload, secretKey, {
+    expiresIn: '10m'
+  });
+
+  return accessToken;
+}
+
+export const refreshAccessToken = (refreshToken) => {
+  try {
+    const decoded = jwt.verify(refreshToken, secretKey);
+    const accessToken = generateAccessToken({
+      sub: decoded.sub,
+      name: decoded.name,
+    })
+
+    return {
+      accessToken,
+      userId: decoded.sub,
+    }
+  } catch (err) {
+    return null;
+  }
+}
