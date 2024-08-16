@@ -28,6 +28,7 @@ function AuthForm() {
         event.preventDefault()
         try{
             const response = await nodeBackendAxiosInstance.post(`/auth/${login ? "login" : "sign-up"}`, formData);
+            setFormData(formDefaultValue)
             appContext.login(response.data)
         }catch(err){
             console.log(err)
