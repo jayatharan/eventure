@@ -24,7 +24,11 @@ export function formatEvent (event) {
 }
 
 export function formatEvents (events) {
-    return events.map(event => formatEvent(event))
+    return events.sort((event1, event2) => {
+        const startDate1 = new Date(event1.startDate);
+        const startDate2 = new Date(event2.startDate);
+        return startDate1 - startDate2;
+    }).map(event => formatEvent(event))
 }
 
 export function groupFormattedEvents (events) {

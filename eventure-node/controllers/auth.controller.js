@@ -47,6 +47,30 @@ export const login = async (req, res) => {
     })
 }
 
+export const changePassword = async (req, res) => {
+    const userId = req.user.sub;
+
+    const {
+        password
+    } = req.body;
+
+    if(!password) {
+        return res.status(401).send(null)
+    }
+
+    const hashedPassword = await hashPassword(password);
+
+    const user = await User.updateOne({
+        _id: userId,
+    }, {
+        password: hashedPassword,
+    })
+
+    return res.send({
+        user
+    })
+}
+
 export const nameCheck = async (req, res) => {
     const {
         name

@@ -2,18 +2,22 @@ import { useEffect, useRef, useState } from "react"
 import AppContext from "../contexts/AppContexts"
 import AuthForm from "../../components/AuthForm"
 import { nodeBackendAxiosInstance, setAuthHeader } from "../../apis/AxiosInstances"
-import { Box, CircularProgress } from "@mui/material"
+import { Alert, Box, Button, CircularProgress, Dialog, DialogActions, DialogContent, DialogTitle, Stack, TextField, Typography } from "@mui/material"
+import { changePassword } from "../hooks/react-query/users/changePassword"
 
 const AppProvider = ({
     // eslint-disable-next-line react/prop-types
     children
 }) => {
+    const [password, setPassword] = useState("")
     const isTokenRefreshed = useRef(false);
     const [loading, setLoading] = useState(true)
     const [authState, setAuthState] = useState({
         authenticated: false,
         user: null,
     })
+    const [showProfile, setShowProfile] = useState(false)
+    const [changePasswordAlert, setChangePasswordAlert] = useState("")
 
     const refreshAccessToken = async () => {
         setLoading(true)
@@ -30,6 +34,17 @@ const AppProvider = ({
             }
         }
         
+        setLoading(false)
+    }
+
+    const changeMyPassword = async () => {
+        setLoading(true)
+        try{
+            await changePassword(password)
+            setChangePasswordAlert("success")
+        }catch(error){
+            setChangePasswordAlert("error")
+        }
         setLoading(false)
     }
 
@@ -54,6 +69,10 @@ const AppProvider = ({
         localStorage.removeItem("refreshToken")
     }
 
+    const openProfile = () => {
+        setShowProfile(true)
+    }
+
     useEffect(()=> {
         if(!isTokenRefreshed.current){
             isTokenRefreshed.current = true;
@@ -76,14 +95,53 @@ const AppProvider = ({
         }
     },[authState])
 
+    useEffect(()=>{
+        setChangePasswordAlert("")
+    }, [showProfile])
+
     const appContextValues = {
         authState,
         login,
-        logout
+        logout,
+        openProfile
     }
 
     return (
         <AppContext.Provider value={appContextValues} >
+            <Dialog open={showProfile} maxWidth={"sm"} fullWidth onClose={() => setShowProfile(false)}> 
+                <DialogTitle component={"div"}>
+                    <Typography variant="h5">
+                        My Profile
+                    </Typography>
+                </DialogTitle>
+                <DialogContent>
+                    <Stack spacing={2}>
+                        {changePasswordAlert && (
+                            <Alert>
+                                {changePasswordAlert === "success" ? "Password changed successfully" : "Password change failed"}
+                            </Alert>
+                        )}
+                        <Stack>
+                            <Typography variant="body2">Username</Typography>
+                            <Typography variant="body1">{authState.user?.name}</Typography>
+                        </Stack>
+                        <Stack>
+                            <Typography variant="body2">Password</Typography>
+                            <TextField 
+                                value={password}
+                                onChange={(event) => setPassword(event.target.value)}
+                                size="small"
+                                type="password"
+                            />
+                        </Stack>
+                    </Stack>
+                </DialogContent>
+                <DialogActions>
+                    <Button disabled={loading} variant="contained" onClick={changeMyPassword}>
+                        Change Password
+                    </Button>
+                </DialogActions>
+            </Dialog>
             <Box sx={{
                 position: "relative",
             }}>

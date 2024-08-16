@@ -18,7 +18,7 @@ import authenticateToken from "../middleware/authenticateToken.js"
 const PORT = 8000;
 const app = express()
 
-const MONGO_CONNECTION_URL = "mongodb://mongo:27017/eventure"
+const MONGO_CONNECTION_URL = "mongodb://localhost:27017/eventure"
 
 try {
     mongoose.connect(MONGO_CONNECTION_URL,  {

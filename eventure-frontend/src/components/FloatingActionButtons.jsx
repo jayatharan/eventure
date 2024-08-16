@@ -5,6 +5,7 @@ import { useSetRecoilState } from "recoil";
 import eventFormState from "../app/recoil/eventFormAtom";
 import { useContext } from "react";
 import AppContext from "../app/contexts/AppContexts";
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
 
 function FloatingActionButtons() {
     const setEventForm = useSetRecoilState(eventFormState);
@@ -25,6 +26,11 @@ function FloatingActionButtons() {
             })}>
                 <Tooltip title="Add New Event">
                     <AddIcon />
+                </Tooltip>
+            </Fab>
+            <Fab color="success">
+                <Tooltip title="My Profile" onClick={() => appContext.openProfile()}>
+                    <AccountBoxIcon />    
                 </Tooltip>
             </Fab>
             <Fab aria-label="logout" onClick={() => appContext.logout()}>
